@@ -1,42 +1,44 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+## Lab-42: Yakker
 
-## Project Name
-
-### Author: Student/Group Name
+### David Chambers / CF Instruction Team
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com)
-* [front-end](http://xyz.com)
+* [repo](https://github.com/dlchambersjr/yakker-server)
+* [CF back-end](https://js-401-socket-io-server.herokuapp.com)
+
 
 ### Modules
-#### `modulename.js`
+#### `index.js` -> `<App>`
+##### Exported Values and Methods
+Renders the contents of `<App>`
+
+#### `app.js` -> `<Messaging>
+##### Exported Values and Methods
+Renders the contents of `messages.js`
+
+#### `messages.js` -> incoming and outgoing messages
 ##### Exported Values and Methods
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+###### `updateWords(words) -> string`
+Stores the incoming messages, their details, and color in state
 
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `handleSubmit(event) -> string`
+Stores the outgoing messages, their details, and color  in state
+
+###### `handleNewWords(event) -> string`
+Stores words as they are type in state
 
 ### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
-
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* `npm run start` from cloned repo directory
 
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+I would test for the following:
+* Does a word get sent.
+* Does a word get received.
+* Does the time stamp get rendered.
+* Do message display newest to oldest?
+* Do message get removed from the display after 30 seconds.
 
 #### UML
-Link to an image of the UML for your application and response to events
+[Yakker-UML](https://raw.githubusercontent.com/dlchambersjr/yakker-server/master/yakker-uml.jpg)
